@@ -1,21 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-body{
-    width: 100%;
-    height: auto;
-    color: #fff;
-}
-#container{
-    background-image: url(images/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-}
 #basal{
     width: 80%;
     margin: 0 auto;
@@ -24,6 +6,13 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+#basal h1.title{
+    padding: 20px 20px;
+    font-weight: 200;
+    backdrop-filter: blur(12px);
+    border-radius: 5px;
+    text-align: center;
+}
 .basal-content{
     width: 100%;
     display: flex;
@@ -31,6 +20,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+/* FORM */
+
 .basal-content form{
     width: 50%;
     display: flex;
@@ -41,15 +33,15 @@ body{
 .basal-content form .field-group{
     width: 300px;
 }
-.basal-content form .field-group input.field{
+.basal-content form .field-group .field{
     width: 100%;
     height: 50px;
     margin-top: 12px;
     outline: 0;
     background-color: #ffffff17;
     backdrop-filter: blur(12px);
-    border: 0;
     box-shadow: 0 0 5px #00ffdd9c;
+    border: 0;
     padding: 0 10px;
     color: #fff;
     font-size: 1.1rem;
@@ -58,12 +50,40 @@ body{
     text-align: center;
     transition: box-shadow 100ms;
 }
-.basal-content form .field-group input.field:focus{
+.basal-content form .field-group .field:focus{
     box-shadow: 0 0 8px #fffffffb;
 }
 .basal-content form .field-group .field::placeholder{
     color: rgba(255, 255, 255, 0.842);
     text-align: center;
+    font-size: 1rem;
+}
+.basal-content form .field-group select.field{
+    font-size: 1rem;
+}
+.basal-content form .field-group option.field{
+    padding: 20px;
+    background-color: #a7fff39c;
+    color: #1414149c;
+}
+.basal-content #submit{
+    height: 50px;
+    width: 200px;
+    background-color: #00ffdd9c;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 5px #00ffdd9c;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    outline: 0;
+    transition: 200ms;
+}
+.basal-content #submit:hover{
+    background-color: #00ffddd2;
+    box-shadow: 0 0 8px #00ffddd2;
 }
 .basal-content .result-modal{
     width: 700px;
@@ -73,16 +93,23 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #ffffff17;
+    border: 1px solid #ffffff34;
+    box-shadow: 0 0 5px #00ffdd9c;
     border-radius: 5px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(15px);
     text-align: center;
     animation: modal 300ms ease-in-out;
+    z-index: 1;
 }
+
+/* END FORM */
+
+/* MODAL */
 .basal-content .result-modal h1{
     font-size: 3rem;
 }
@@ -129,21 +156,22 @@ body{
     transform: rotate(230deg);
 }
 
+/* END MODAL*/
 
+/* ERROR */
+.error{
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.548);
+    border-radius: 5px;
+    animation: error 400ms ease-in-out;
+}
+.error p{
+    font-size: .9rem;
+}
 
-@keyframes modal{
-    from{
-        opacity: 0;
-        top: 0;
-    }
-    to{
-        opacity: 1;
-        top: 50%;
-    }
-}
-@keyframes modalClose{
-    to{
-        opacity: 0;
-        top: 0;
-    }
-}
+/* END ERROR*/
