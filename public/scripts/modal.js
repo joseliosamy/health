@@ -45,7 +45,9 @@ function basal(){
         if(modal){
             return
         }
-        error.parentElement.removeChild(error)
+        if(error){
+            error.parentElement.removeChild(error)
+        }
         var output = `
         <div class="result-modal">
         <span class="close" onclick="closeModal()">

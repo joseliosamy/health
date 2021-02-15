@@ -1,0 +1,31 @@
+@media(max-width:900px){
+    .basal-content .result-modal{
+        width: 90%;
+    }
+    .basal-content .result-modal span{
+        font-weight: 500;
+    }
+}
+@media(max-width:350px){
+    nav{
+        width: 95%;
+    }
+    #basal{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .basal-content form{
+        width: 100%;
+    }
+    .basal-content form .field-group {
+        width: 80%;
+    }
+    .basal-content form .field-group .field{
+        font-size: 1rem;
+    }
+    .basal-content #submit{
+        width: 80%;
+        font-size: 1.1rem;
+    }
+    
+}
