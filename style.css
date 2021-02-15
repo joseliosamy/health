@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+#container{
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+#basal{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.basal-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.basal-content form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.basal-content form .field-group{
+    width: 300px;
+}
+.basal-content form .field-group input.field{
+    width: 100%;
+    height: 50px;
+    margin-top: 12px;
+    outline: 0;
+    background-color: #ffffff17;
+    backdrop-filter: blur(12px);
+    border: 0;
+    box-shadow: 0 0 5px #00ffdd9c;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+    transition: box-shadow 100ms;
+}
+.basal-content form .field-group input.field:focus{
+    box-shadow: 0 0 8px #fffffffb;
+}
+.basal-content form .field-group .field::placeholder{
+    color: rgba(255, 255, 255, 0.842);
+    text-align: center;
+}
+.basal-content .result-modal{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff17;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    text-align: center;
+    animation: modal 300ms ease-in-out;
+}
+.basal-content .result-modal h1{
+    font-size: 3rem;
+}
+.basal-content .result-modal p{
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+.basal-content .result-modal span{
+    color: #20a392;
+}
+.basal-content .result-modal .close{
+    width: 17px;
+    height: 17px;
+    background-color: #ff2525b9;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+.basal-content .result-modal .close:hover{
+    background-color: #ff0000f1;
+}
+
+.basal-content .result-modal .close span{
+    position: absolute;
+    top: 52%;
+    left: 30%;
+    width: 40%;
+    height: 1px;
+    background-color: #491818;
+    transition: background-color 200ms;
+}
+.basal-content .result-modal .close:hover span{
+    background-color: #ffffff;
+}
+.basal-content .result-modal .close span:nth-child(1){
+    transform: translate(-50%,-50%);
+    transform: rotate(130deg);
+}
+.basal-content .result-modal .close span:nth-child(2){
+    transform: translate(-50%,-50%);
+    transform: rotate(230deg);
+}
+
+
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        top: 0;
+    }
+    to{
+        opacity: 1;
+        top: 50%;
+    }
+}
+@keyframes modalClose{
+    to{
+        opacity: 0;
+        top: 0;
+    }
+}

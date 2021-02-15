@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="container">
+        <section id="basal">
+            <div class="basal-content">
+                <form>
+                    <div class="field-group">
+                        <input class="field" type="text" name="name" placeholder="Seu nome">
+                    </div><!-- FIELD-GROUP -->
+                    <div class="field-group">
+                        <input class="field" type="number" name="age" placeholder="Sua idade">
+                    </div><!-- FIELD-GROUP -->
+                    <div class="field-group">
+                        <input class="field" type="number" name="weight" placeholder="Seu peso em kg">
+                    </div><!-- FIELD-GROUP -->
+                    <div class="field-group">
+                        <input  class="field" type="number" name="heigth" placeholder="Sua altura em cm">
+                    </div>
+                    <div class="field-group">
+                        <select name="genre" id="genre" class="field">
+                            <option class="field" value="genre">Selecione seu gênero</option>
+                            <option value="0" class="field">Masculino</option>
+                            <option value="1" class="field">Feminino</option>
+                        </select><!-- GENRE -->
+                    </div><!-- FIELD-GROUP -->
+
+                </form><!-- FORM -->
+
+                <button id="submit" onclick="basal()">submit</button><!-- SUBMIT -->
+            </div><!-- BASAL-CONTENT -->
+        </section><!-- BASAL -->
+    </div><!-- CONTAINER -->
+    <script src="modal.js"></script>
+    <script src="https://kit.fontawesome.com/05552c5881.js" crossorigin="anonymous"></script>
+</body>
+</html>
