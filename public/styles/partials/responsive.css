@@ -1,8 +1,8 @@
 @media(max-width:900px){
-    .basal-content .result-modal{
+    .basal-calc .result-modal{
         width: 90%;
     }
-    .basal-content .result-modal span{
+    .basal-calc .result-modal span{
         font-weight: 500;
     }
 }
@@ -14,16 +14,16 @@
         width: 100%;
         padding-bottom: 20px;
     }
-    .basal-content form{
+    .basal-calc form{
         width: 100%;
     }
-    .basal-content form .field-group {
+    .basal-calc form .field-group {
         width: 80%;
     }
-    .basal-content form .field-group .field{
+    .basal-calc form .field-group .field{
         font-size: 1rem;
     }
-    .basal-content #submit{
+    .basal-calc #submit{
         width: 80%;
         font-size: 1.1rem;
     }

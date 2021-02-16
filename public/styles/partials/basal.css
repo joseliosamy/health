@@ -2,18 +2,19 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
+    padding-bottom: 40px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 #basal h1.title{
-    padding: 20px 20px;
+    padding: 20px;
     font-weight: 200;
     backdrop-filter: blur(12px);
     border-radius: 5px;
     text-align: center;
 }
-.basal-content{
+.basal-calc{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -23,17 +24,17 @@
 
 /* FORM */
 
-.basal-content form{
+.basal-calc form{
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.basal-content form .field-group{
+.basal-calc form .field-group{
     width: 300px;
 }
-.basal-content form .field-group .field{
+.basal-calc form .field-group .field{
     width: 100%;
     height: 50px;
     margin-top: 12px;
@@ -50,23 +51,23 @@
     text-align: center;
     transition: box-shadow 100ms;
 }
-.basal-content form .field-group .field:focus{
+.basal-calc form .field-group .field:focus{
     box-shadow: 0 0 8px #fffffffb;
 }
-.basal-content form .field-group .field::placeholder{
+.basal-calc form .field-group .field::placeholder{
     color: rgba(255, 255, 255, 0.842);
     text-align: center;
     font-size: 1rem;
 }
-.basal-content form .field-group select.field{
+.basal-calc form .field-group select.field{
     font-size: 1rem;
 }
-.basal-content form .field-group option.field{
+.basal-calc form .field-group option.field{
     padding: 20px;
     background-color: #a7fff39c;
     color: #1414149c;
 }
-.basal-content #submit{
+.basal-calc #submit{
     height: 50px;
     width: 200px;
     background-color: #00ffdd9c;
@@ -81,11 +82,11 @@
     outline: 0;
     transition: 200ms;
 }
-.basal-content #submit:hover{
+.basal-calc #submit:hover{
     background-color: #00ffddd2;
     box-shadow: 0 0 8px #00ffddd2;
 }
-.basal-content .result-modal{
+.basal-calc .result-modal{
     width: 700px;
     height: 500px;
     position: absolute;
@@ -110,17 +111,17 @@
 /* END FORM */
 
 /* MODAL */
-.basal-content .result-modal h1{
+.basal-calc .result-modal h1{
     font-size: 3rem;
 }
-.basal-content .result-modal p{
+.basal-calc .result-modal p{
     margin-top: 5px;
     font-size: 1.5rem;
 }
-.basal-content .result-modal span{
+.basal-calc .result-modal span{
     color: #20a392;
 }
-.basal-content .result-modal .close{
+.basal-calc .result-modal .close{
     width: 17px;
     height: 17px;
     background-color: #ff2525b9;
@@ -131,11 +132,11 @@
     cursor: pointer;
     transition: background-color 200ms;
 }
-.basal-content .result-modal .close:hover{
+.basal-calc .result-modal .close:hover{
     background-color: #ff0000f1;
 }
 
-.basal-content .result-modal .close span{
+.basal-calc .result-modal .close span{
     position: absolute;
     top: 52%;
     left: 30%;
@@ -144,14 +145,14 @@
     background-color: #491818;
     transition: background-color 200ms;
 }
-.basal-content .result-modal .close:hover span{
+.basal-calc .result-modal .close:hover span{
     background-color: #ffffff;
 }
-.basal-content .result-modal .close span:nth-child(1){
+.basal-calc .result-modal .close span:nth-child(1){
     transform: translate(-50%,-50%);
     transform: rotate(130deg);
 }
-.basal-content .result-modal .close span:nth-child(2){
+.basal-calc .result-modal .close span:nth-child(2){
     transform: translate(-50%,-50%);
     transform: rotate(230deg);
 }

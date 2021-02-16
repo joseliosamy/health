@@ -36,7 +36,7 @@ function basal(){
                 <p>Campos inválidos!</p>
             </div>
         `
-        document.querySelector('.basal-content').insertAdjacentHTML("beforeend", typeError)
+        document.querySelector('.basal-calc').insertAdjacentHTML("beforeend", typeError)
     }
     
     // VALIDAÇÃO DO GÊNERO MASCULINO
@@ -59,7 +59,7 @@ function basal(){
             <p>Sua taxa metabolica basal é de <br> <span>${calc}</span> calorias.</p>
         </div>
         `
-        document.querySelector('.basal-content').insertAdjacentHTML("afterbegin", output)
+        document.querySelector('.basal-calc').insertAdjacentHTML("afterbegin", output)
     }
     // VALIDAÇÃO DE GÊNERO FEMININO
     else if(genre == 1){
@@ -78,7 +78,7 @@ function basal(){
             <p>Sua taxa metabolica basal é de <br> <span>${calc}</span> calorias.</p>
         </div>
         `
-        document.querySelector('.basal-content').insertAdjacentHTML("afterbegin", output)
+        document.querySelector('.basal-calc').insertAdjacentHTML("afterbegin", output)
     }
     else{
         return 
