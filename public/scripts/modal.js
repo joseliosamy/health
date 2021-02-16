@@ -4,15 +4,15 @@ const exitModal = document.querySelector('.close');
 
 // FUNCTIONS
 
-function closeModal(){
+function closeModal() {
     document.querySelector('.result-modal').style.animation = 'modalClose 300ms ease-in-out';
 
-    setTimeout(()=>{
+    setTimeout(() => {
         document.querySelector('.result-modal').parentElement.removeChild(document.querySelector('.result-modal'))
     }, 200)
 }
 
-function basal(){
+function basal() {
     // INPUTS
     const name = document.querySelector('input[name="name"]').value;
     const age = document.querySelector('input[name="age"]').value;
@@ -27,8 +27,8 @@ function basal(){
     // IF
 
     // VALIDAÇÃO DE PREENCHIMENTO DOS INPUTS
-    if(age.length <= 0 || weight.length <= 0 || heigth.length <= 0 || genre == "genre"){
-        if(error){
+    if (age.length <= 0 || weight.length <= 0 || heigth.length <= 0 || genre == "genre") {
+        if (error) {
             return
         }
         var typeError = `                   
@@ -38,33 +38,38 @@ function basal(){
         `
         document.querySelector('.basal-calc').insertAdjacentHTML("beforeend", typeError)
     }
-    
+
     // VALIDAÇÃO DO GÊNERO MASCULINO
-    if(genre == 0){
+    if (genre == 0) {
         // VALIDAÇÃO PARA TER APENAS 1 MODAL NA PÁGINA
-        if(modal){
+        if (modal) {
             return
         }
-        if(error){
+        if (error) {
             error.parentElement.removeChild(error)
         }
         var output = `
-        <div class="result-modal">
-        <span class="close" onclick="closeModal()">
-            <span></span>
-            <span></span>
+            <div class="result-modal">
+                <span class="close" onclick="closeModal()">
+                    <span></span>
+                    <span></span>
+        
+                </span>
+                    
+                <div class="modal-title">
+                    <h1>UHealth<i class='bx bx-plus-medical'></i>    </h1>
+                </div>
 
-            </span>
-            <h1>Olá <span>${name}</span>!</h1>
-            <p>Sua taxa metabolica basal é de <br> <span>${calc}</span> calorias.</p>
-        </div>
+                <h1>Olá <span>${name}</span>!</h1>
+                <p>Sua taxa metabolica basal é de <br> <span>${calc}</span> calorias.</p>
+            </div>
         `
         document.querySelector('.basal-calc').insertAdjacentHTML("afterbegin", output)
     }
     // VALIDAÇÃO DE GÊNERO FEMININO
-    else if(genre == 1){
+    else if (genre == 1) {
         calc = Math.round(655 + (9.6 * weight) + (1.8 * heigth) - (4.7 * age));
-        if(modal){
+        if (modal) {
             return
         }
         var output = `
@@ -80,7 +85,7 @@ function basal(){
         `
         document.querySelector('.basal-calc').insertAdjacentHTML("afterbegin", output)
     }
-    else{
-        return 
+    else {
+        return
     }
 }
