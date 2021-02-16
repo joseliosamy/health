@@ -2,7 +2,9 @@
 
 .basal-table{
     position: absolute;
+    top: 40%;
     left: 7%;
+    transform: translateY(-50%);
     text-align: center;
 }
 .basal-table h1{
@@ -31,7 +33,7 @@ table tr td{
     padding: 5px;
     border-radius: 5px;
     backdrop-filter: blur(12px);
-    transition: box-shadow 100ms ease-in-out;
+    transition: 100ms ease-in-out;
 }
 table tr td:hover{
     box-shadow: 0 0 10px #00ffdd9c;
