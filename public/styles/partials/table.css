@@ -52,6 +52,7 @@ table tr td:nth-child(1){
         width: 100%;
         position: initial;
         margin-top: 30px;
+        transform: translateY(0%);
     }
     table tr td:hover{
         background-color: #00ffdd9c;
